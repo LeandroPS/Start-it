@@ -1,0 +1,172 @@
+body{
+	margin: 0 auto;
+}
+
+div.tudo{
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	
+	font-family: Open Sans;
+	
+}
+
+section{
+	width: 100%;
+}
+
+	section.apresentacao{
+		top: 0px;
+		width: 100%;
+		height: 101%;
+		background-color: rgb(10,88,110);
+		position: absolute;
+		transition: top 1s;
+	}
+	
+		section.apresentacao.up{
+			
+		}
+
+		section.apresentacao div.apresenta{
+			height: 57px;
+			text-align: center;
+			position: absolute;
+			top: 30px;
+			
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+
+			section.apresentacao div.apresenta img.logo-boulevard{
+				height:	100%;
+				
+			}
+
+			section.apresentacao div.apresenta span{
+				line-height: 20px;
+				
+				display: block;
+			}
+
+
+	section.apresentacao div.logo-container{
+		position: absolute;
+		
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		text-align: center;
+	}
+
+		section.apresentacao div.logo-container img.logo{
+			width: 440px;
+			margin-bottom: 15px;
+		}
+
+
+		section.apresentacao div.logo-container div.data-e-local{
+			
+		}
+		
+			section.apresentacao div.logo-container div.data-e-local span{
+				font-size: 25px;
+				padding: 7px;
+				
+				background: #fff;
+				color: rgb(10,88,110);
+				display: inline-block;
+				
+			}
+
+			section.apresentacao div.logo-container div.data-e-local span.data{
+				
+			}
+
+			section.apresentacao div.logo-container div.data-e-local span.local{
+				margin-left: 5px;
+			}
+
+	section.apresentacao div.realizacao{
+		width: 100px;
+		text-align: center;
+		
+		position: absolute;
+		
+		bottom: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+		section.apresentacao div.realizacao span{
+			line-height: 20px;	
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		section.apresentacao div.realizacao img{
+			height: 57px;
+		}
+
+section.palestrantes{
+	
+}
+
+	section.palestrantes div.painel-palestrantes{
+		height: 300px;
+		width: 100%;
+		background-color: rgba(10,88,110,0.9);
+	}
+
+	section.palestrantes ul.lista-palestrantes{
+		background-color: rgba(10,88,110,0.8);
+		width: 100%;
+		padding: 20px 0px;
+		margin: 0px;
+		
+		display: flex;
+		justify-content: space-around;
+		flex-direction: row;
+	}
+
+		section.palestrantes ul.lista-palestrantes li{
+			margin: 0px;
+			display: block;
+			width: 150px;
+			text-align: center;
+		}
+
+			section.palestrantes ul.lista-palestrantes li img{
+				width: 100px;
+				
+			}
+
+			section.palestrantes ul.lista-palestrantes li span{
+				display: inline-block;
+				font-weight: bold;
+				
+				text-align: center;
+			}
+
+
+section.programacao{
+	height: 300px;
+	background-color: rgba(10,88,110,0.7);
+}
+
+section.patrocinadores{
+	height: 300px;
+	background-color: rgba(10,88,110,0.6);
+}
+
+section.inscricao{
+	height: 300px;
+	background-color: rgba(10,88,110,0.5);
+}
+
+section.contato{
+	height: 300px;
+	background-color: rgba(10,88,110,0.4);
+}
+
