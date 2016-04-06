@@ -1,3 +1,14 @@
+@font-face{
+	font-family: Open Sans;
+	src: url(../fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+
+@font-face{
+	font-family: Open Sans;
+	src: url(../fonts/Open_Sans/OpenSans-Bold.ttf);
+	font-weight: bold;
+}
+
 body{
 	margin: 0 auto;
 }
@@ -165,45 +176,8 @@ section.programacao{
 	background-color: rgba(10,88,110,0.7);
 	overflow: auto;
 }
-/*
-	section.programacao>ul{
-		padding: 20px;
-		border-top: 2px solid;
-	}
 
-		section.programacao>ul > li{
-			background-color: #fff;
-			color: #000;
-			list-style: none;
-			border-radius: 5px;
-			width: 200px;
-			margin-right: 10px;
-			display: inline-block;
-			float: left;
-			padding: 5px;
-			position: relative;
-		}
 
-			section.programacao>ul > li:after{
-				content: "";
-				width: 0px;
-				height: 0px;
-				border-left: 10px solid transparent;
-				border-bottom: 10px solid #fff;
-				border-right: 10px solid transparent;
-				position: absolute;
-				top: -9px;
-				left: 50%;
-				transform: translateX(-50%);
-				
-			}
-
-			section.programacao>ul > li:after{
-				content: attr(data-hora);
-				
-			}
-
-*/
 	section.programacao>ul{
 		padding: 20px;
 		border-left: 2px solid;
@@ -222,8 +196,37 @@ section.programacao{
 			position: relative;
 		}
 
-			section.programacao>ul > li:after{
+			section.programacao > ul > li:after{
 				content: "";
+				background-color: #fff;
+				border-radius: 50%;
+				width: 10px;
+				height: 10px;
+				display: block;
+				
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: -26px;
+			}
+
+			section.programacao > ul > li:before{
+				content: attr(data-hora);
+				
+				color: rgba(255,255,255,0.4);
+				position: absolute;
+				display: block;
+				top: 50%;
+				/*left: -90px;*/
+				right: calc(100% + 42px);
+				transform: translateY(-50%);
+				
+			}
+
+						/*section.programacao>ul > li:after{*/
+				
+			section.programacao>ul > li div.ponta{
+				/*content: "";*/
 				width: 0px;
 				height: 0px;
 				/*border-left: 10px solid red;*/
@@ -238,17 +241,43 @@ section.programacao{
 				
 			}
 
-			section.programacao>ul > li:before{
-				content: attr(data-hora);
-				
-				position: absolute;
+			section.programacao>ul > li span.titulo{
+				font-weight: bold;
+				font-family: Open Sans;
+				text-align: center;
 				display: block;
-				top: 50%;
-				/*left: -90px;*/
-				right: calc(100% + 42px);
-				transform: translateY(-50%);
-				
 			}
+
+
+				section.programacao>ul > li > ul{
+					padding: 0px;
+					margin: 0px;
+					margin-top: 5px;
+				}
+
+					section.programacao>ul > li > ul > li{
+						padding: 0px;
+						margin: 0px;
+						list-style: none;
+						line-height: 30px;
+					}
+
+						section.programacao>ul > li > ul > li:not(:last-child){
+							margin-bottom: 5px;
+						}
+
+						section.programacao>ul > li > ul > li img{
+							width: 30px;
+							height: 30px;
+							border-radius: 50%;
+							float: left;
+							margin-right: 5px;
+						}
+
+						section.programacao>ul > li > ul > li span.nome{
+							display: inline-block;
+						}
+
 section.patrocinadores{
 	background-color: rgba(10,88,110,0.6);
 	padding: 20px;
