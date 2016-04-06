@@ -7,7 +7,11 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="slick/slick/slick.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		
 		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="slick/slick/slick.js"></script>
 		<script src="js/js.js"></script>
 		<script src="js/maps.js"></script>
 	</head>
@@ -69,135 +73,145 @@
 				</ul>
 			</section>
 			<section class="programacao">
-				<ul>
-					<li data-hora="18:00h">
-						<div class="ponta"></div>
-						<span class="titulo">
-							Abertura do Evento
-						</span>
-					</li>
-					<li data-hora="18:05h">
-						<div class="ponta"></div>
-						<span class="titulo">
-							Palestra
-						</span>
-						<ul>
-							<li>
-								<img class="palestrante-profile" src="Images/luiz-mini.jpg">
-								<span class="nome">
-									Luiz Quinderé
-								</span>
-							</li>
-						</ul>
-					</li>
-					<li data-hora="18:55h">
-						<div class="ponta"></div>
-						<span class="titulo">
-							Palestra
-						</span>
-						<ul>
-							<li>
-								<img class="palestrante-profile" src="Images/licinio-mini.jpeg">
-								<span class="nome">
-									Joilson Barcelos
-								</span>
-							</li>
-							<li>
-								<img class="palestrante-profile" src="Images/licinio-mini.jpeg">
-								<span class="nome">
-									Licinio Barcelos
-								</span>
-							</li>
-						</ul>
-					</li>
-					<li data-hora="19:15h">
-						<div class="ponta"></div>
-						<span class="titulo">
-							Mesa Redonda
-						</span>
-						<ul>
-							<li>
-								<img src="Images/christiano-mini.jpg">
-								<span class="nome">
-									Karla Bernardes
-								</span>
-							</li>
-							<li>
-								<img src="Images/christiano-mini.jpg">
-								<span class="nome">
-									Noêmia Viana
-								</span>
-							</li>
-							<li>
-								<img src="Images/christiano-mini.jpg">
-								<span class="nome">
-									Gilberto Nascimento
-								</span>
-							</li>
-							<li>
-								<img src="Images/christiano-mini.jpg">
-								<span class="nome">
-									Tarcísio Viana
-								</span>
-							</li>
-							<li>
-								<img src="Images/christiano-mini.jpg">
-								<span class="nome">
-									Christiano Abreu
-								</span>
-							</li>
-						</ul>
-					</li>
-					
-					<li data-hora="20:00h">
-						<div class="ponta"></div>
-						<span class="titulo">
-							Coffee Break
-						</span>
-					</li>
-					<li data-hora="20:30h">
-						<div class="ponta"></div>
-						<span class="titulo">
-							Palestra
-						</span>
-						<ul>
-							<li>
-								<img class="palestrante-profile" src="Images/luiza-mini.jpeg">
-								<span class="nome">
-									Luiza Helena Trajano
-								</span>
-							</li>
-						</ul>
-					</li>
-					<li data-hora="21:30h">
-						<div class="ponta"></div>
-						<span class="titulo">
-							Palestra
-						</span>
-						<ul>
-							<li>
-								<img class="palestrante-profile" src="Images/fernando-borges-mini.jpg">
-								<span class="nome">
-									Fernando Borges
-								</span>
-							</li>
-						</ul>
-					</li>
-					<li data-hora="21:40h">
-						<div class="ponta"></div>
-						<span class="titulo">
-							Palestra
-						</span>
-						<ul>
-							<li>
-								<img class="palestrante-profile" src="Images/virna-mini.jpg">
-								<span class="nome">
-									Virna Elias
-								</span>
-							</li>
-						</ul>
-					</li>
-				</ul>
+				<div class="lista-container">
+					<ul class="programacao-lista">
+						<li data-hora="18:00h">
+							<div class="ponta"></div>
+							<span class="titulo">
+								Abertura do Evento
+							</span>
+						</li>
+						<li data-hora="18:05h">
+							<div class="ponta"></div>
+							<span class="titulo">
+								Palestra
+							</span>
+							<ul>
+								<li>
+									<img class="palestrante-profile" src="Images/luiz-mini.jpg">
+									<span class="nome">
+										Luiz Quinderé
+									</span>
+								</li>
+							</ul>
+						</li>
+						<li data-hora="18:55h">
+							<div class="ponta"></div>
+							<span class="titulo">
+								Palestra
+							</span>
+							<ul>
+								<li>
+									<img class="palestrante-profile" src="Images/licinio-mini.jpeg">
+									<span class="nome">
+										Joilson Barcelos
+									</span>
+								</li>
+								<li>
+									<img class="palestrante-profile" src="Images/licinio-mini.jpeg">
+									<span class="nome">
+										Licinio Barcelos
+									</span>
+								</li>
+							</ul>
+						</li>
+						<li data-hora="19:15h">
+							<div class="ponta"></div>
+							<span class="titulo">
+								Mesa Redonda
+							</span>
+							<ul>
+								<li>
+									<img src="Images/christiano-mini.jpg">
+									<span class="nome">
+										Karla Bernardes
+									</span>
+								</li>
+								<li>
+									<img src="Images/christiano-mini.jpg">
+									<span class="nome">
+										Noêmia Viana
+									</span>
+								</li>
+								<li>
+									<img src="Images/christiano-mini.jpg">
+									<span class="nome">
+										Gilberto Nascimento
+									</span>
+								</li>
+								<li>
+									<img src="Images/christiano-mini.jpg">
+									<span class="nome">
+										Tarcísio Viana
+									</span>
+								</li>
+								<li>
+									<img src="Images/christiano-mini.jpg">
+									<span class="nome">
+										Christiano Abreu
+									</span>
+								</li>
+							</ul>
+						</li>
+
+						<li data-hora="20:00h">
+							<div class="ponta"></div>
+							<span class="titulo">
+								Coffee Break
+							</span>
+						</li>
+						<li data-hora="20:30h">
+							<div class="ponta"></div>
+							<span class="titulo">
+								Palestra
+							</span>
+							<ul>
+								<li>
+									<img class="palestrante-profile" src="Images/luiza-mini.jpeg">
+									<span class="nome">
+										Luiza Helena Trajano
+									</span>
+								</li>
+							</ul>
+						</li>
+						<li data-hora="21:30h">
+							<div class="ponta"></div>
+							<span class="titulo">
+								Palestra
+							</span>
+							<ul>
+								<li>
+									<img class="palestrante-profile" src="Images/fernando-borges-mini.jpg">
+									<span class="nome">
+										Fernando Borges
+									</span>
+								</li>
+							</ul>
+						</li>
+						<li data-hora="21:40h">
+							<div class="ponta"></div>
+							<span class="titulo">
+								Palestra
+							</span>
+							<ul>
+								<li>
+									<img class="palestrante-profile" src="Images/virna-mini.jpg">
+									<span class="nome">
+										Virna Elias
+									</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="botoes">
+					<button class="go-right">
+						<span class="fa fa-2x fa-arrow-left"></span>
+					</button>
+					<button class="go-left">
+						<span class="fa fa-2x fa-arrow-right"></span>
+					</button>
+				</div>
 			</section>
 			<section class="patrocinadores">
 				<div class="master">
@@ -254,5 +268,6 @@
 		</div>
 		<script src="js/maps.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpYuZuqUHKqFuyzV6a5c4LQCUO4IuRITs&signed_in=true&callback=initMap" async defer></script>
+		
 	</body>
 </html>

@@ -177,13 +177,27 @@ section.programacao{
 	overflow: auto;
 }
 
-section.programacao>ul{
+	section.programacao div.lista-container{
+		width: 100%;
+		height: 309px;
+		position: relative;
+		overflow: hidden;
+		
+	}
+
+section.programacao> div.lista-container >ul{
 		padding: 20px;
 		border-top: 2px solid;
 		margin-top: 70px;
+		position: absolute;
+	
+		width: 1870px;
+		left: -250px;
+	
+		transition: left 1s;
 	}
 
-		section.programacao>ul > li{
+		section.programacao> div.lista-container >ul > li{
 			background-color: #fff;
 			color: #000;
 			list-style: none;
@@ -196,11 +210,11 @@ section.programacao>ul{
 			position: relative;
 		}
 
-			section.programacao>ul > li:last-child{
-				margin-left: 0px;
+			section.programacao> div.lista-container > ul > li:last-child{
+				margin-right: 0px;
 			}
 
-			section.programacao > ul > li:after{
+			section.programacao > div.lista-container > ul > li:after{
 				content: "";
 				background-color: #fff;
 				border-radius: 50%;
@@ -214,7 +228,7 @@ section.programacao>ul{
 				left: 50%;
 			}
 
-			section.programacao > ul > li:before{
+			section.programacao > div.lista-container > ul > li:before{
 				content: attr(data-hora);
 				
 				color: rgba(255,255,255,0.4);
@@ -227,7 +241,7 @@ section.programacao>ul{
 				
 			}
 				
-			section.programacao>ul > li div.ponta{
+			section.programacao > div.lista-container > ul > li div.ponta{
 				/*content: "";*/
 				width: 0px;
 				height: 0px;
@@ -243,7 +257,7 @@ section.programacao>ul{
 				
 			}
 
-			section.programacao>ul > li span.titulo{
+			section.programacao > div.lista-container > ul > li span.titulo{
 				font-weight: bold;
 				font-family: Open Sans;
 				text-align: center;
@@ -251,24 +265,24 @@ section.programacao>ul{
 			}
 
 
-				section.programacao>ul > li > ul{
+				section.programacao> div.lista-container > ul > li > ul{
 					padding: 0px;
 					margin: 0px;
 					margin-top: 5px;
 				}
 
-					section.programacao>ul > li > ul > li{
+					section.programacao> div.lista-container > ul > li > ul > li{
 						padding: 0px;
 						margin: 0px;
 						list-style: none;
 						line-height: 30px;
 					}
 
-						section.programacao>ul > li > ul > li:not(:last-child){
+						section.programacao> div.lista-container > ul > li > ul > li:not(:last-child){
 							margin-bottom: 5px;
 						}
 
-						section.programacao>ul > li > ul > li img{
+						section.programacao> div.lista-container > ul > li > ul > li img{
 							width: 30px;
 							height: 30px;
 							border-radius: 50%;
@@ -276,7 +290,7 @@ section.programacao>ul{
 							margin-right: 5px;
 						}
 
-						section.programacao>ul > li > ul > li span.nome{
+						section.programacao> div.lista-container > ul > li > ul > li span.nome{
 							display: inline-block;
 						}
 
@@ -385,6 +399,42 @@ section.programacao>ul{
 							display: inline-block;
 						}
 */
+
+	section.programacao div.botoes{
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		display: inline-block;
+		margin: 20px 0px;
+		
+		
+	}
+		section.programacao div.botoes button{
+			width: 50px;
+			height: 50px;
+			background-color: rgba(255,255,255,0.2);
+			
+			color: #fff;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 50px;
+			outline: none;
+			
+			border: none;
+		}
+
+			section.programacao div.botoes button:hover{
+				background-color: rgba(255,255,255,0.1);
+				cursor: pointer;
+			}
+
+			section.programacao div.botoes button.go-left{
+
+			}
+
+			section.programacao div.botoes button.go-right{
+				margin-right: 10px;
+			}
 section.patrocinadores{
 	background-color: rgba(10,88,110,0.6);
 	padding: 20px;
