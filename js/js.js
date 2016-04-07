@@ -10,6 +10,36 @@ $(function(){
 	
 	$("programacao-lista").slick();
 	
+	function crop(){
+		var width = $("section.programacao").width() - 40;
+		var qts = Math.floor(width/230);
+		$("div.lista-container").width((qts*230)+10);
+		dots();
+	}
+	
+	crop();
+	
+	function dots(){
+		ulwidth = $("ul.programacao-lista").width();
+		cropwidth = $("div.lista-container").width();
+		
+		exibido = Math.floor($("div.lista-container").width()/230);
+		
+		total = 8 - exibido + 1;
+		
+		$("div.dots").empty();
+		
+		for(i = 1; i<=total; i++){
+			dot = jQuery("<div></div>");
+			dot.addClass(i==1?"current":"");
+			$("div.dots").append(dot);
+		}
+	}
+	
+	$(window).resize(function(){
+		crop();
+	});
+	
 	var lastScrollTop = 0;
 	$(window).scroll(function(event){
 	   var st = $(this).scrollTop();
@@ -57,26 +87,40 @@ $(function(){
 		$("div.cortina, div.inscricao").removeClass("show");
 	});
 	
-	$("section.programacao button.go-left").click(function(){
+	$("section.programacao button.go-right").click(function(){
 		var left = $("ul.programacao-lista").position().left;
 		
 		if(left==0){
-			var new_left = -250;
+			var new_left = -230;
+		}else if(($("ul.programacao-lista").width() - (Math.abs(left) + $("div.lista-container").width()))< 230){
+			var new_left = -($("ul.programacao-lista").width() + 40 - $("div.lista-container").width());
+			$("div.dots div").removeClass("current");
+			$("div.dots div:last-child").addClass("current");
+			return;
 		}else{
 			var new_left = left -230;
 		}
 		
+		var curr = $("div.dots div.current");
+		curr.removeClass("current").next().addClass("current");
+		
 		$("ul.programacao-lista").css('left', new_left+"px");
 	});
 	
-	$("section.programacao button.go-right").click(function(){
-				var left = $("ul.programacao-lista").position().left;
+	$("section.programacao button.go-left").click(function(){
+		var left = $("ul.programacao-lista").position().left;
 		
-		if(left==-250){
+		if(left==0){
 			var new_left = 0;
+			$("div.dots div").removeClass("current");
+			$("div.dots div:first-child").addClass("current");
+			return;
 		}else{
 			var new_left = left + 230;
 		}
+		
+		var curr = $("div.dots div.current");
+		curr.removeClass("current").prev().addClass("current");
 		
 		$("ul.programacao-lista").css('left', new_left+"px");
 	});
