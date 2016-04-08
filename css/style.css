@@ -853,3 +853,17 @@ section.programacao> div.lista-container >ul{
 	
 }
 
+@media only screen and (max-width: 660px) {
+	section.patrocinadores div.master{
+		float:none;
+		width: 100%;
+		height: 200px;
+		margin: 0px;
+	}
+	
+	section.patrocinadores div.master img{
+		width: 100%;
+    	height: calc(100% - 50px);
+	}
+}
+
