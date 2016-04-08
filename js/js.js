@@ -8,12 +8,14 @@
 
 $(function(){
 	
-	$("programacao-lista").slick();
+	//$("programacao-lista").slick();
 	
 	function crop(){
 		var width = $("section.programacao").width() - 40;
 		if(width>=$("ul.programacao-lista").width()){
 			$("div.botoes").hide();
+		}else if($(window).width()<773){
+			return;
 		}else{
 			var qts = Math.floor(width/230);
 			$("div.lista-container").width((qts*230)+10);

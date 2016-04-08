@@ -759,7 +759,7 @@ section.programacao> div.lista-container >ul{
 			section.programacao div.lista-container > ul > li:before{
 				content: attr(data-hora);
 				
-				color: rgba(255,255,255,0.4);
+				color: #f8d80e;
 				position: absolute;
 				display: block;
 				top: 50%;
@@ -821,8 +821,35 @@ section.programacao> div.lista-container >ul{
 							display: inline-block;
 						}
 	
-	section.programacao div.botoes{
-		display: none;
+		section.programacao div.botoes{
+			display: none;
+		}
+	
+	section.contato form{
+		margin-bottom: 20px;
+		float: left;
+		margin-top: 20px;
+		padding: 0px 20px;
+		box-sizing: border-box;
+		width: 100%;
 	}
+	
+	section.contato div.side{
+		width: 100%;
+	}
+	
+	section.contato div.side img{
+		max-width: 100%;
+		
+	}
+	
+	
+}
+
+@media only screen and (max-width: 335px) {
+	section.programacao> div.lista-container >ul > li{
+		width: 192px;
+	}
+	
 }
 
