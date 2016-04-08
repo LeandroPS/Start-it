@@ -21,6 +21,21 @@ div.tudo{
 	font-family: Open Sans;
 }
 
+nav.menu{
+	width: 100%;
+	background-color: rgb(10,88,110);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 60px;
+	text-align: center;
+	z-index: 5;
+}
+	nav.menu img.menu-logo{
+		height: 40px;
+		margin-top: 10px;
+	}
+
 section{
 	width: 100%;
 	padding: 0px 20px;
@@ -34,6 +49,9 @@ section{
 		background-color: rgb(10,88,110);
 		position: absolute;
 		transition: top 1s;
+		z-index: 6;
+		
+		overflow: hidden;
 	}
 	
 		section.apresentacao.up{
@@ -85,7 +103,7 @@ section{
 
 
 		section.apresentacao div.logo-container div.data-e-local{
-			width: 500px;
+			width: auto;
 		}
 		
 			section.apresentacao div.logo-container div.data-e-local span{
@@ -99,11 +117,12 @@ section{
 			}
 
 			section.apresentacao div.logo-container div.data-e-local span.data{
-				
+				margin-bottom: 5px;
 			}
 
 			section.apresentacao div.logo-container div.data-e-local span.local{
 				margin-left: 5px;
+				width: 343px;
 			}
 
 	section.apresentacao div.realizacao{
@@ -112,7 +131,7 @@ section{
 		
 		position: absolute;
 		
-		bottom: 30px;
+		bottom: 20px;
 		left: 50%;
 		transform: translateX(-50%);
 	}
@@ -121,10 +140,11 @@ section{
 			line-height: 20px;	
 			display: block;
 			margin-bottom: 5px;
+			font-size: 14px;
 		}
 
 		section.apresentacao div.realizacao img{
-			height: 57px;
+			height: 30px;
 		}
 
 section.palestrantes{
@@ -148,6 +168,8 @@ section.palestrantes{
 		display: flex;
 		justify-content: space-around;
 		flex-direction: row;
+		
+		overflow: hidden;
 		
 		box-sizing: border-box;
 	}
@@ -234,7 +256,8 @@ section.programacao> div.lista-container >ul{
 			section.programacao > div.lista-container > ul > li:before{
 				content: attr(data-hora);
 				
-				color: rgba(255,255,255,0.4);
+				/*color: rgba(255,255,255,0.4);*/
+				color: #f8d80e;
 				position: absolute;
 				display: block;
 				left: 50%;
@@ -503,6 +526,10 @@ section.patrocinadores{
 		text-align: center;
 	}
 
+		section.patrocinadores div.master h2{
+			color: #f8d80e;	
+		}
+
 		section.patrocinadores div.master img{
 			width: 100%;
 			
@@ -534,7 +561,7 @@ section.patrocinadores{
 		}
 
 			section.patrocinadores ul.lista-patrocinio li img{
-				max-height: 100px;
+				max-height: 70px;
 				max-width: 100px;
 				
 				position: relative;
@@ -549,6 +576,7 @@ section.patrocinadores{
 			section.patrocinadores ul.lista-patrocinio li:last-child{
 				flex: auto;
 				margin: 0px;
+				height: 0px;
 			}
 
 section.local{
@@ -578,7 +606,100 @@ section.inscricao{
 }
 
 section.contato{
-	height: 300px;
+	overflow: hidden;
 	background-color: rgba(10,88,110,0.3);
 }
+
+	section.contato div.contato-container{
+		max-width: 1000px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	section.contato form{
+		margin-bottom: 20px;
+		float: left;
+		margin-top: 20px;
+		padding: 0px 20px;
+		box-sizing: border-box;
+		width: 50%;
+	}
+
+		section.contato form input, section.contato form textarea{
+			width: 100%;
+			height: 30px;
+			display: block;
+			margin-bottom: 10px;
+			padding: 0px 5px;
+			
+			border: 0px solid;
+			background: #fff;
+			resize: none;
+			outline: none;
+			box-sizing: border-box;
+		}
+
+		section.contato form textarea{
+			height: 200px;
+		}
+
+		section.contato form button{
+			background: #fff;
+			border: none;
+			outline: none;
+			padding: 15px;
+			color: rgba(10,88,110, 0.6);
+			font-family: inherit;
+			font-size: inherit;
+			
+			cursor: pointer;
+			
+			transition: all 0.5s;
+		}
+	
+		section.contato form ul{
+			padding: 0px;
+		}
+
+			section.contato form ul li{
+				list-style: none;
+			}
+
+	section.contato div.side{
+		margin: 20px 0px;
+		padding: 20px;
+		background-color: rgba(255,255,255,0.1);
+		display: block;
+		float: right;
+		width: 50%;
+		box-sizing: border-box;
+		border-radius: 5px;
+		text-align: center;
+	}
+
+section.footer{
+	height: 60px;
+	background-color: blue;
+	background-color: rgba(10,88,110,0.2);
+}
+
+	section.footer div.desenvolvido-por{
+		width: 102px;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		position: relative;
+		
+	}
+
+		section.footer div.desenvolvido-por span{
+		    font-size: 12px;
+		}
+
+		section.footer div.desenvolvido-por div.logo{
+			width: 100%;
+			height: 25px;
+			background-color: #fff;
+		}
 

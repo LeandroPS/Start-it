@@ -12,9 +12,14 @@ $(function(){
 	
 	function crop(){
 		var width = $("section.programacao").width() - 40;
-		var qts = Math.floor(width/230);
-		$("div.lista-container").width((qts*230)+10);
-		dots();
+		if(width>=$("ul.programacao-lista").width()){
+			$("div.botoes").hide();
+		}else{
+			var qts = Math.floor(width/230);
+			$("div.lista-container").width((qts*230)+10);
+
+			dots();
+		}
 	}
 	
 	crop();
@@ -93,7 +98,7 @@ $(function(){
 		if(left==0){
 			var new_left = -230;
 		}else if(($("ul.programacao-lista").width() - (Math.abs(left) + $("div.lista-container").width()))< 230){
-			var new_left = -($("ul.programacao-lista").width() + 40 - $("div.lista-container").width());
+			var new_left = -($("ul.programacao-lista").width() + 10 - $("div.lista-container").width());
 			$("div.dots div").removeClass("current");
 			$("div.dots div:last-child").addClass("current");
 			return;
