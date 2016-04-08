@@ -175,7 +175,7 @@ section.palestrantes{
 	}
 
 		section.palestrantes ul.lista-palestrantes li{
-			margin: 0px;
+			margin: 0px 10px;
 			display: block;
 			width: 150px;
 			text-align: center;
@@ -199,126 +199,7 @@ section.programacao{
 	overflow: auto;
 }
 
-	section.programacao div.lista-container{
-		width: 100%;
-		height: 309px;
-		position: relative;
-		overflow: hidden;
-		
-		left: 50%;
-		transform: translateX(-50%);
-		
-	}
 
-section.programacao> div.lista-container >ul{
-		padding: 20px 0px;
-		border-top: 2px solid;
-		margin-top: 70px;
-		position: absolute;
-	
-		width: 1870px;
-		left: 0px;
-	
-		transition: left 1s;
-	}
-
-		section.programacao> div.lista-container >ul > li{
-			background-color: #fff;
-			color: #000;
-			list-style: none;
-			border-radius: 5px;
-			width: 200px;
-			margin-left: 10px;
-			display: inline-block;
-			float: left;
-			padding: 10px;
-			position: relative;
-		}
-
-			/*section.programacao> div.lista-container > ul > li:last-child{
-				margin-right: 0px;
-			}*/
-
-			section.programacao > div.lista-container > ul > li:after{
-				content: "";
-				background-color: #fff;
-				border-radius: 50%;
-				width: 10px;
-				height: 10px;
-				display: block;
-				
-				position: absolute;
-				top: -26px;
-				transform: translateX(-50%);
-				left: 50%;
-			}
-
-			section.programacao > div.lista-container > ul > li:before{
-				content: attr(data-hora);
-				
-				/*color: rgba(255,255,255,0.4);*/
-				color: #f8d80e;
-				position: absolute;
-				display: block;
-				left: 50%;
-				/*left: -90px;*/
-				bottom: calc(100% + 42px);
-				transform: translateX(-50%);
-				
-			}
-				
-			section.programacao > div.lista-container > ul > li div.ponta{
-				/*content: "";*/
-				width: 0px;
-				height: 0px;
-				/*border-left: 10px solid red;*/
-				border-left: 10px solid transparent; 
-				border-bottom: 10px solid #fff;
-				
-				border-right: 10px solid transparent;
-				position: absolute;
-				top: -9px;
-				left: 50%;
-				transform: translateX(-50%);
-				
-			}
-
-			section.programacao > div.lista-container > ul > li span.titulo{
-				font-weight: bold;
-				font-family: Open Sans;
-				text-align: center;
-				display: block;
-			}
-
-
-				section.programacao> div.lista-container > ul > li > ul{
-					padding: 0px;
-					margin: 0px;
-					margin-top: 5px;
-				}
-
-					section.programacao> div.lista-container > ul > li > ul > li{
-						padding: 0px;
-						margin: 0px;
-						list-style: none;
-						line-height: 30px;
-					}
-
-						section.programacao> div.lista-container > ul > li > ul > li:not(:last-child){
-							margin-bottom: 5px;
-						}
-
-						section.programacao> div.lista-container > ul > li > ul > li img{
-							width: 30px;
-							height: 30px;
-							border-radius: 50%;
-							float: left;
-							margin-right: 5px;
-						}
-
-						section.programacao> div.lista-container > ul > li > ul > li span.nome{
-							display: inline-block;
-						}
 
 /*
 
@@ -665,6 +546,10 @@ section.contato{
 			section.contato form ul li{
 				list-style: none;
 			}
+		
+				section.contato form ul li span{
+					margin-right: 10px;
+				}
 
 	section.contato div.side{
 		margin: 20px 0px;
@@ -702,4 +587,242 @@ section.footer{
 			height: 25px;
 			background-color: #fff;
 		}
+
+@media only screen and (min-width: 772px) {
+		section.programacao div.lista-container{
+		width: 100%;
+		height: 309px;
+		position: relative;
+		overflow: hidden;
+		
+		left: 50%;
+		transform: translateX(-50%);
+		
+	}
+
+section.programacao> div.lista-container >ul{
+		padding: 20px 0px;
+		border-top: 2px solid;
+		margin-top: 70px;
+		position: absolute;
+	
+		width: 1870px;
+		left: 0px;
+	
+		transition: left 1s;
+	}
+
+		section.programacao> div.lista-container >ul > li{
+			background-color: #fff;
+			color: #000;
+			list-style: none;
+			border-radius: 5px;
+			width: 200px;
+			margin-left: 10px;
+			display: inline-block;
+			float: left;
+			padding: 10px;
+			position: relative;
+		}
+
+			/*section.programacao> div.lista-container > ul > li:last-child{
+				margin-right: 0px;
+			}*/
+
+			section.programacao > div.lista-container > ul > li:after{
+				content: "";
+				background-color: #fff;
+				border-radius: 50%;
+				width: 10px;
+				height: 10px;
+				display: block;
+				
+				position: absolute;
+				top: -26px;
+				transform: translateX(-50%);
+				left: 50%;
+			}
+
+			section.programacao > div.lista-container > ul > li:before{
+				content: attr(data-hora);
+				
+				/*color: rgba(255,255,255,0.4);*/
+				color: #f8d80e;
+				position: absolute;
+				display: block;
+				left: 50%;
+				/*left: -90px;*/
+				bottom: calc(100% + 42px);
+				transform: translateX(-50%);
+				
+			}
+				
+			section.programacao > div.lista-container > ul > li div.ponta{
+				/*content: "";*/
+				width: 0px;
+				height: 0px;
+				/*border-left: 10px solid red;*/
+				border-left: 10px solid transparent; 
+				border-bottom: 10px solid #fff;
+				
+				border-right: 10px solid transparent;
+				position: absolute;
+				top: -9px;
+				left: 50%;
+				transform: translateX(-50%);
+				
+			}
+
+			section.programacao > div.lista-container > ul > li span.titulo{
+				font-weight: bold;
+				font-family: Open Sans;
+				text-align: center;
+				display: block;
+			}
+
+
+				section.programacao> div.lista-container > ul > li > ul{
+					padding: 0px;
+					margin: 0px;
+					margin-top: 5px;
+				}
+
+					section.programacao> div.lista-container > ul > li > ul > li{
+						padding: 0px;
+						margin: 0px;
+						list-style: none;
+						line-height: 30px;
+					}
+
+						section.programacao> div.lista-container > ul > li > ul > li:not(:last-child){
+							margin-bottom: 5px;
+						}
+
+						section.programacao> div.lista-container > ul > li > ul > li img{
+							width: 30px;
+							height: 30px;
+							border-radius: 50%;
+							float: left;
+							margin-right: 5px;
+						}
+
+						section.programacao> div.lista-container > ul > li > ul > li span.nome{
+							display: inline-block;
+						}
+}
+
+@media only screen and (max-width: 772px) {
+	section.programacao> div.lista-container{
+		left: 50%;
+		transform: translateX(-50%);
+		position: relative;
+		width: 312px;
+	}
+	
+	section.programacao> div.lista-container >ul{
+		padding: 20px;
+		border-left: 2px solid;
+		margin-left: 70px;
+		width: 230px;
+	}
+
+		section.programacao div.lista-container>ul > li{
+			background-color: #fff;
+			color: #000;
+			list-style: none;
+			border-radius: 5px;
+			width: 200px;
+			margin-bottom: 10px;
+			display: block;
+			padding: 10px;
+			position: relative;
+		}
+
+			section.programacao div.lista-container >ul > li:last-child{
+				margin-bottom: 0px;
+			}
+
+			section.programacao div.lista-container > ul > li:after{
+				content: "";
+				background-color: #fff;
+				border-radius: 50%;
+				width: 10px;
+				height: 10px;
+				display: block;
+				
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: -26px;
+			}
+
+			section.programacao div.lista-container > ul > li:before{
+				content: attr(data-hora);
+				
+				color: rgba(255,255,255,0.4);
+				position: absolute;
+				display: block;
+				top: 50%;
+				right: calc(100% + 42px);
+				transform: translateY(-50%);
+				
+			}
+
+						
+				
+			section.programacao div.lista-container >ul > li div.ponta{
+				width: 0px;
+				height: 0px;
+				border-top: 10px solid transparent; 
+				border-bottom: 10px solid transparent;
+				
+				border-right: 10px solid #fff;
+				position: absolute;
+				top: 50%;
+				left: -9px;
+				transform: translateY(-50%);
+				
+			}
+
+			section.programacao div.lista-container >ul > li span.titulo{
+				font-weight: bold;
+				font-family: Open Sans;
+				text-align: center;
+				display: block;
+			}
+
+
+				section.programacao div.lista-container >ul > li > ul{
+					padding: 0px;
+					margin: 0px;
+					margin-top: 5px;
+				}
+
+					section.programacao div.lista-container >ul > li > ul > li{
+						padding: 0px;
+						margin: 0px;
+						list-style: none;
+						line-height: 30px;
+					}
+
+						section.programacao div.lista-container >ul > li > ul > li:not(:last-child){
+							margin-bottom: 5px;
+						}
+
+						section.programacao div.lista-container >ul > li > ul > li img{
+							width: 30px;
+							height: 30px;
+							border-radius: 50%;
+							float: left;
+							margin-right: 5px;
+						}
+
+						section.programacao div.lista-container >ul > li > ul > li span.nome{
+							display: inline-block;
+						}
+	
+	section.programacao div.botoes{
+		display: none;
+	}
+}
 
