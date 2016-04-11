@@ -9,6 +9,11 @@
 	font-weight: bold;
 }
 
+@font-face{
+	font-family: Open Sans Light;
+	src: url(../fonts/Open_Sans/OpenSans-Light.ttf);
+}
+
 body{
 	margin: 0 auto;
 }
@@ -34,6 +39,29 @@ nav.menu{
 	nav.menu img.menu-logo{
 		height: 40px;
 		margin-top: 10px;
+	}
+
+	nav.menu a{
+		display: block;
+		position: absolute;
+		right: 15px;
+		top: 7px;
+		height: 46px;
+		line-height: 46px;
+		text-decoration: none;
+		
+		padding: 0px 15px;
+		border: none;
+		background-color: rgba(0,255,0,0.5);
+		font-family: Open Sans Light;
+		color: #fff;
+		font-size: 16px;
+}
+
+
+
+ 
+		
 	}
 
 section{
@@ -154,6 +182,8 @@ section.palestrantes{
 	section.palestrantes div.painel-palestrantes{
 		height: 300px;
 		width: 100%;
+		height: 0px;
+		margin-top: 60px;
 		background-color: rgba(10,88,110,0.9);
 		padding: 0px 20px;
 		box-sizing: border-box;
@@ -198,6 +228,10 @@ section.programacao{
 	background-color: rgba(10,88,110,0.7);
 	overflow: auto;
 }
+
+	section.programacao h2{
+		text-align: center;
+	}
 
 
 
@@ -484,7 +518,39 @@ section.local{
 section.inscricao{
 	height: 300px;
 	background-color: rgba(10,88,110,0.4);
+	
+	overflow: hidden;
 }
+
+	section.inscricao h2{
+		text-align: center;
+		margin: 0px;
+		margin-top: 20px;
+	}
+
+	section.inscricao form{
+		margin-bottom: 20px;
+		float: left;
+		margin-top: 20px;
+		padding: 0px 20px;
+		box-sizing: border-box;
+		width: 100%;
+	}
+
+		section.inscricao form button{
+			background: #fff;
+			border: none;
+			outline: none;
+			padding: 0px 15px;
+			color: rgba(10,88,110, 0.6);
+			font-family: inherit;
+			font-size: inherit;
+			cursor: pointer;
+			transition: all 0.5s;
+			height: 45px;
+			box-sizing: border-box;
+			line-height: 45px;
+		}
 
 section.contato{
 	overflow: hidden;
@@ -507,7 +573,7 @@ section.contato{
 		width: 50%;
 	}
 
-		section.contato form input, section.contato form textarea{
+		section.contato form input, section.contato form textarea, section.inscricao form input{
 			width: 100%;
 			height: 30px;
 			display: block;
@@ -603,6 +669,7 @@ section.footer{
 section.programacao> div.lista-container >ul{
 		padding: 20px 0px;
 		border-top: 2px solid;
+		border-color: #f8d80e;
 		margin-top: 70px;
 		position: absolute;
 	
@@ -631,7 +698,7 @@ section.programacao> div.lista-container >ul{
 
 			section.programacao > div.lista-container > ul > li:after{
 				content: "";
-				background-color: #fff;
+				background-color: #f8d80e;
 				border-radius: 50%;
 				width: 10px;
 				height: 10px;
@@ -647,7 +714,8 @@ section.programacao> div.lista-container >ul{
 				content: attr(data-hora);
 				
 				/*color: rgba(255,255,255,0.4);*/
-				color: #f8d80e;
+				color: #fff;
+				font-family: Open Sans Light;
 				position: absolute;
 				display: block;
 				left: 50%;
@@ -709,9 +777,19 @@ section.programacao> div.lista-container >ul{
 						section.programacao> div.lista-container > ul > li > ul > li span.nome{
 							display: inline-block;
 						}
+	
+		section.inscricao form input{
+			float: left;
+			width: calc(50% - 10px);
+		}
+
+			section.inscricao form input:nth-child(even){
+				margin-left: 10px;
+			}
 }
 
 @media only screen and (max-width: 772px) {
+	
 	section.programacao> div.lista-container{
 		left: 50%;
 		transform: translateX(-50%);
@@ -825,6 +903,10 @@ section.programacao> div.lista-container >ul{
 			display: none;
 		}
 	
+	section.contato{
+		padding-bottom: 10px;	
+	}
+	
 	section.contato form{
 		margin-bottom: 20px;
 		float: left;
@@ -835,7 +917,9 @@ section.programacao> div.lista-container >ul{
 	}
 	
 	section.contato div.side{
-		width: 100%;
+		width: calc(100% - 20px);
+		margin-bottom: 20px;
+		margin: 0px 10px;
 	}
 	
 	section.contato div.side img{
@@ -865,5 +949,19 @@ section.programacao> div.lista-container >ul{
 		width: 100%;
     	height: calc(100% - 50px);
 	}
+	
+	section.patrocinadores h2{
+		text-align: center;
+	}
+	
+	section.patrocinadores ul.lista-patrocinio{
+		
+	}
+	
+		section.patrocinadores ul.lista-patrocinio li{
+			margin: 0px;
+			text-align: center;
+		}
+	
 }
 
