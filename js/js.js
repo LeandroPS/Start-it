@@ -167,6 +167,9 @@ $(function(){
 	
 	function seleciona_palestrante(index){
 		$("section.palestrantes div.painel-palestrantes").addClass("show");
+		$("section.palestrantes div.palestrantes-container").addClass("retrai");
+		$("section.palestrantes div.palestrantes-container span.aviso").addClass("hide");
+		
 		$("section.palestrantes ul>li").removeClass("current");
 		$("section.palestrantes ul>li:eq("+index+")").addClass("current");
 		
@@ -180,6 +183,8 @@ $(function(){
 		nxt = $("section.palestrantes div.painel-palestrantes div.painel:not(.current)");
 		current.removeClass("current");
 		nxt.addClass("current");
+		
+		$("section.palestrantes div.painel-palestrantes").height(nxt.height());
 
 	}
 	
