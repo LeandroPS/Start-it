@@ -9,9 +9,21 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="slick/slick/slick.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/flickity.css">
 		
-		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script>
+			$(document).bind('mobileinit',function(){
+				jQuery.mobile.autoInitializePage = false;
+				$.mobile.changePage.defaults.changeHash = false;
+				$.mobile.hashListeningEnabled = false;
+				$.mobile.pushStateEnabled = false;
+			});
+		</script> 
+		<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
 		<script type="text/javascript" src="slick/slick/slick.js"></script>
+		<script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
+		
 		<script src="js/js.js"></script>
 		<script src="js/maps.js"></script>
 	</head>
@@ -41,39 +53,60 @@
 				</div>
 			</section>
 			<section class="palestrantes">
-				<div class="painel-palestrantes"></div>
-				<ul class="lista-palestrantes">
-					<li>
-						<img class="perfil-foto" src="Images/luiza-mini.jpeg">
-						<span class="nome">
-							Luiza Trajano
-						</span>
-					</li>
-					<li>
-						<img class="perfil-foto" src="Images/luiz-mini.jpg">
-						<span class="nome">
-							Luiz Quinderé
-						</span>
-					</li>
-					<li>
-						<img class="perfil-foto" src="Images/licinio-mini.jpeg">
-						<span class="nome">
-							Licinio Barcelos
-						</span>
-					</li>
-					<li>
-						<img class="perfil-foto" src="Images/luiz-mini.jpg">
-						<span class="nome">
-							Samuel
-						</span>
-					</li>
-					<li>
-						<img class="perfil-foto" src="Images/luiza-mini.jpeg">
-						<span class="nome">
-							Luiza Trajano
-						</span>
-					</li>
-				</ul>
+				<div class="painel-palestrantes">
+					<div class="painel current">
+						<div class="detalhes-container">
+							<h2 class="nome"></h2>
+							<p class="descricao">
+
+							</p>
+						</div>
+						<div class="logo-container">
+							<img class="logo">
+						</div>
+					</div>
+					<div class="painel">
+						<div class="detalhes-container">
+							<h2 class="nome"></h2>
+							<p class="descricao">
+
+							</p>
+						</div>
+						<div class="logo-container">
+							<img class="logo">
+						</div>
+					</div>
+					<div class="ponta"></div>
+				</div>
+				<div class="palestrantes-container">
+					<ul class="lista-palestrantes">
+						<li>
+							<img class="perfil-foto" src="Images/luiza-mini.jpeg">
+							<span class="nome">
+								Luiza Trajano
+							</span>
+						</li>
+						<li>
+							<img class="perfil-foto" src="Images/luiz-mini.jpg">
+							<span class="nome">
+								Luiz Quinderé
+							</span>
+						</li>
+						<li>
+							<img class="perfil-foto" src="Images/licinio-mini.jpeg">
+							<span class="nome">
+								Licinio Barcelos
+							</span>
+						</li>
+						<li>
+							<img class="perfil-foto" src="Images/luiz-mini.jpg">
+							<span class="nome">
+								Samuel
+							</span>
+						</li>
+					</ul>
+					<span>Clique em um palestrantes para ver detalhes</span>
+				</div>
 			</section>
 			<section class="programacao">
 				<h2>Programação</h2>
@@ -222,44 +255,46 @@
 				</div>
 			</section>
 			<section class="patrocinadores">
-				<div class="master">
-					<h2>Patrocinador Master:</h2>
-					<img src="Images/logo-tetra.svg">
-				</div>
-				<h2>Patrocinadores:</h2>
-				<ul class="lista-patrocinio">
-					<li>
-						<img src="Images/logo-boulevad.svg">
-					</li>
-					<li>
-						<img src="Images/magazine-luiza.svg">
-					</li>
-					<li>
-						<img src="Images/logo-smartt.svg">
-					</li>
-					<li>
-						<img src="Images/logo-sb.svg">
-					</li>
-					<li>
-						<img src="Images/Logo-Brownie-2013-Vetor.svg">
-					</li>
-					<li>
+				<div class="patrocinadores-container">
+					<div class="master">
+						<h2>Patrocinador Master:</h2>
 						<img src="Images/logo-tetra.svg">
-					</li>
-					<li>
-						<img src="Images/logo-boulevad.svg">
-					</li>
-					<li>
-						<img src="Images/logo-boulevad.svg">
-					</li>
-					<li>
-						<img src="Images/logo-boulevad.svg">
-					</li>
-					<li>
-						<img src="Images/logo-boulevad.svg">
-					</li>
-					<li></li>
-				</ul>
+					</div>
+					<h2>Patrocinadores:</h2>
+					<ul class="lista-patrocinio">
+						<li>
+							<img src="Images/logo-boulevad.svg">
+						</li>
+						<li>
+							<img src="Images/magazine-luiza.svg">
+						</li>
+						<li>
+							<img src="Images/logo-smartt.svg">
+						</li>
+						<li>
+							<img src="Images/logo-sb.svg">
+						</li>
+						<li>
+							<img src="Images/Logo-Brownie-2013-Vetor.svg">
+						</li>
+						<li>
+							<img src="Images/logo-tetra.svg">
+						</li>
+						<li>
+							<img src="Images/logo-boulevad.svg">
+						</li>
+						<li>
+							<img src="Images/logo-boulevad.svg">
+						</li>
+						<li>
+							<img src="Images/logo-boulevad.svg">
+						</li>
+						<li>
+							<img src="Images/logo-boulevad.svg">
+						</li>
+						<li></li>
+					</ul>
+				</div>
 			</section>
 			<section class="local">
 				

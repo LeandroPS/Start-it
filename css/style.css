@@ -58,12 +58,6 @@ nav.menu{
 		font-size: 16px;
 }
 
-
-
- 
-		
-	}
-
 section{
 	width: 100%;
 	padding: 0px 20px;
@@ -183,14 +177,65 @@ section.palestrantes{
 		height: 300px;
 		width: 100%;
 		height: 0px;
+		overflow: hidden;
 		margin-top: 60px;
 		background-color: rgba(10,88,110,0.9);
-		padding: 0px 20px;
+		padding: 0px ;
 		box-sizing: border-box;
+		transition: height 1s;
+		position: relative;
+	}
+
+		section.palestrantes div.painel-palestrantes.show{
+			height: 300px;
+		}
+
+		section.palestrantes div.painel-palestrantes div.painel{
+			opacity: 0;
+			transition: opacity 1s;
+			position: absolute;
+			top: 0px;
+			max-width: 700px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		section.palestrantes div.painel-palestrantes div.painel.current{
+			opacity: 1;
+			transition: opacity 1s;
+		}
+
+		section.palestrantes div.painel-palestrantes div.painel div.detalhes-container{
+			display: inline-block;
+			float: left;
+			width: 500px;
+		}
+
+		section.palestrantes div.painel-palestrantes div.painel h1.nome{
+			
+		}
+
+		section.palestrantes div.painel-palestrantes div.painel p.descricao{
+			
+		}
+
+		section.palestrantes div.painel-palestrantes div.painel div.logo-container{
+			width: 30%;
+			min-width: 200px;
+			display: inline-block;
+			float: right;
+		}
+
+		section.palestrantes div.painel-palestrantes div.painel img.logo{
+			max-width: 100%;
+		}
+	
+	section.palestrantes div.palestrantes-container{
+		background-color: rgba(10,88,110,0.8);
 	}
 
 	section.palestrantes ul.lista-palestrantes{
-		background-color: rgba(10,88,110,0.8);
+		
 		width: 100%;
 		padding: 20px 20px;
 		margin: 0px;
@@ -202,13 +247,16 @@ section.palestrantes{
 		overflow: hidden;
 		
 		box-sizing: border-box;
+		
+		transition: left 1s;
 	}
 
 		section.palestrantes ul.lista-palestrantes li{
-			margin: 0px 10px;
-			display: block;
-			width: 150px;
+			margin: 10px 10px;
+			display: inline-block;
+			width: 125px;
 			text-align: center;
+			position: relative;
 		}
 
 			section.palestrantes ul.lista-palestrantes li img{
@@ -218,10 +266,35 @@ section.palestrantes{
 
 			section.palestrantes ul.lista-palestrantes li span{
 				display: inline-block;
-				font-weight: bold;
 				
 				text-align: center;
 			}
+
+				section.palestrantes ul.lista-palestrantes li.current{
+					font-weight: bold;
+					color: #f8d80e;
+					width: 125px;
+				}
+
+					section.palestrantes ul.lista-palestrantes li:after{
+						content: "";
+						width: 0px;
+						height: 0px;
+						/* border-left: 10px solid red; */
+						border-left: 20px solid transparent;
+						border-top: 20px solid rgba(10,88,110,0.5);
+						border-right: 20px solid transparent;
+						position: absolute;
+						top: -50px;
+						left: 50%;
+						transform: translateX(-50%);
+						transition: top 1s;
+					}
+
+						section.palestrantes ul.lista-palestrantes li.current:after{
+							top: -30px;
+							transition: top 1s;
+						}
 
 
 section.programacao{
@@ -417,6 +490,14 @@ section.patrocinadores{
 	overflow: hidden;
 }
 
+	section.patrocinadores div.patrocinadores-container{
+		max-width: 1000px;
+		left: 50%;
+		transform: translateX(-50%);
+		position: relative;
+		overflow: hidden;
+	}
+
 	section.patrocinadores h2{
 		padding: 0px;
 		margin: 20px 0px;
@@ -472,6 +553,7 @@ section.patrocinadores{
 			height: 100px;
 			width: 100px;
 			margin-right: 20px;
+			text-align: center;
 			
 		}
 
@@ -516,7 +598,7 @@ section.local{
 	}
 
 section.inscricao{
-	height: 300px;
+	
 	background-color: rgba(10,88,110,0.4);
 	
 	overflow: hidden;
@@ -535,6 +617,10 @@ section.inscricao{
 		padding: 0px 20px;
 		box-sizing: border-box;
 		width: 100%;
+		max-width: 1000px;
+		position:relative;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 		section.inscricao form button{
@@ -570,7 +656,7 @@ section.contato{
 		margin-top: 20px;
 		padding: 0px 20px;
 		box-sizing: border-box;
-		width: 50%;
+		width: calc(50% - 10px);
 	}
 
 		section.contato form input, section.contato form textarea, section.inscricao form input{
@@ -579,6 +665,7 @@ section.contato{
 			display: block;
 			margin-bottom: 10px;
 			padding: 0px 5px;
+			border-radius: 0px;
 			
 			border: 0px solid;
 			background: #fff;
@@ -618,12 +705,12 @@ section.contato{
 				}
 
 	section.contato div.side{
-		margin: 20px 0px;
+		margin: 20px 20px 20px 0px;
 		padding: 20px;
 		background-color: rgba(255,255,255,0.1);
 		display: block;
 		float: right;
-		width: 50%;
+		width: calc(50% - 10px);
 		box-sizing: border-box;
 		border-radius: 5px;
 		text-align: center;
@@ -654,17 +741,29 @@ section.footer{
 			background-color: #fff;
 		}
 
+section{
+	/*background-color: red !important;*/
+}
+/*
+	section:nth-child(even){
+		background-color: rgba(10,88,110,0.8) !important;
+	}
+
+	section:nth-child(odd){
+		background-color: rgba(10,88,110,0.6) !important;
+	}
+*/
 @media only screen and (min-width: 772px) {
 		section.programacao div.lista-container{
-		width: 100%;
-		height: 309px;
-		position: relative;
-		overflow: hidden;
-		
-		left: 50%;
-		transform: translateX(-50%);
-		
-	}
+			width: 100%;
+			height: 309px;
+			position: relative;
+			overflow: hidden;
+
+			left: 50%;
+			transform: translateX(-50%);
+
+		}
 
 section.programacao> div.lista-container >ul{
 		padding: 20px 0px;
@@ -778,9 +877,13 @@ section.programacao> div.lista-container >ul{
 							display: inline-block;
 						}
 	
+			section.programacao div.botoes{
+				display: inline-block;
+			}
+	
 		section.inscricao form input{
 			float: left;
-			width: calc(50% - 10px);
+			width: calc(50% - 5px);
 		}
 
 			section.inscricao form input:nth-child(even){
@@ -935,6 +1038,32 @@ section.programacao> div.lista-container >ul{
 		width: 192px;
 	}
 	
+}
+
+@media only screen and (max-width: 480px) {
+	section.palestrantes{
+		overflow: hidden;
+		width: 100%;
+		
+	}
+	
+	section.palestrantes div.painel-palestrantes{
+		width: 100%;
+	}
+	
+	section.palestrantes div.palestrantes-container{
+		width: 100%;
+		overflow: hidden;
+		background: rgba(10,88,110,0.8);
+	}
+	
+	section.palestrantes ul.lista-palestrantes{
+		display: block;
+		width: 633px;
+		left: 0px;
+		position: relative;
+		background-color: transparent;
+	}
 }
 
 @media only screen and (max-width: 660px) {
